@@ -17,12 +17,13 @@ export interface Profile {
   matchPercent: number;
   verified: boolean;
   online: boolean;
+  telegramUsername: string;
   bio: string;
   zodiac: string;
   work: string;
   education: string;
   photos: string[];
-  tags: { label: string; emoji: string }[];
+  tags: { label: string }[];
   psychology: PsychologyProfile;
   icebreakerQuestions: string[];
 }
@@ -43,15 +44,17 @@ export interface UserProfile {
   };
 }
 
+export const TARGET_TELEGRAM_USERNAME = "klvnmrt";
+
 export const CURRENT_USER: UserProfile = {
   name: "Алексей",
   age: 25,
   city: "Москва",
   avatar: "/photos/alex_user.jpg",
-  bio: "Создаю классные продукты в IT, люблю ночной город, винил и спонтанные поездки за кофе в 2 ночи ☕️",
+  bio: "Создаю продукты в IT, люблю ночной город, винил и спонтанные поездки за кофе в полночь.",
   matchScore: 94,
   temperament: "Амбиверт • Архитектор (INTJ)",
-  interests: ["IT & Стартапы", "Кофе", "Путешествия", "Винил", "Кино", "Сноуборд"],
+  interests: ["IT и Стартапы", "Кофе", "Путешествия", "Винил", "Кино", "Сноуборд"],
   psychology: {
     humor: 92,
     leisure: 88,
@@ -69,8 +72,9 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 96,
     verified: true,
     online: true,
+    telegramUsername: "klvnmrt",
     bio: "Архитектор пространства и мыслей. Люблю современное искусство, утренний фильтр-кофе и искренние разговоры под джаз.",
-    zodiac: "Весы ♎️",
+    zodiac: "Весы",
     work: "Архитектор в студии дизайна",
     education: "МАРХИ",
     photos: [
@@ -79,11 +83,11 @@ export const MOCK_PROFILES: Profile[] = [
       "/photos/sofia_3.jpg"
     ],
     tags: [
-      { label: "Искусство", emoji: "🎨" },
-      { label: "Путешествия", emoji: "✈️" },
-      { label: "Кофе", emoji: "☕️" },
-      { label: "Архитектура", emoji: "🏛️" },
-      { label: "Джаз", emoji: "🎷" }
+      { label: "Искусство" },
+      { label: "Путешествия" },
+      { label: "Кофе" },
+      { label: "Архитектура" },
+      { label: "Джаз" }
     ],
     psychology: {
       humor: 96,
@@ -95,9 +99,9 @@ export const MOCK_PROFILES: Profile[] = [
       summary: "Идеальное совпадение по взглядам на жизнь и саморазвитие. Вы оба цените эстетику, независимость и взаимную поддержку."
     },
     icebreakerQuestions: [
-      "Какое твое самое безумное спонтанное путешествие? ✈️",
-      "Идеальное воскресенье: выставка в галерее или сериалы под пледом? ☕️",
-      "Если бы мы прямо сейчас пошли гулять, какой трек играл бы в наушниках? 🎵"
+      "Какое твое самое безумное спонтанное путешествие?",
+      "Идеальное воскресенье: выставка в галерее или фильмы под пледом?",
+      "Если бы мы прямо сейчас пошли гулять, какой трек играл бы в наушниках?"
     ]
   },
   {
@@ -109,8 +113,9 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 93,
     verified: true,
     online: false,
-    bio: "Product Designer. Фотографирую на пленочный Olympus, бегаю полумарафоны и верю, что лучшая терапия — это смех над мемами.",
-    zodiac: "Близнецы ♊️",
+    telegramUsername: "klvnmrt",
+    bio: "Product Designer. Фотографирую на пленочный Olympus, бегаю полумарафоны и ценю людей с тонким чувством юмора.",
+    zodiac: "Близнецы",
     work: "Senior UI/UX Designer в Fintech",
     education: "ВШЭ (Дизайн)",
     photos: [
@@ -119,10 +124,10 @@ export const MOCK_PROFILES: Profile[] = [
       "/photos/alisa_3.jpg"
     ],
     tags: [
-      { label: "UI/UX", emoji: "💻" },
-      { label: "Бег & Спорт", emoji: "🏃‍♀️" },
-      { label: "Пленка 35mm", emoji: "📷" },
-      { label: "Электронная музыка", emoji: "🎧" }
+      { label: "UI/UX" },
+      { label: "Бег и Спорт" },
+      { label: "Пленка 35mm" },
+      { label: "Электронная музыка" }
     ],
     psychology: {
       humor: 94,
@@ -131,12 +136,12 @@ export const MOCK_PROFILES: Profile[] = [
       temperament: "Амбиверт • Креатор",
       loveLanguage: "Слова поддержки и совместные приключения",
       mbti: "ENTP",
-      summary: "Общий культурный код и динамичный темп жизни. Вам никогда не будет скучно в диалоге."
+      summary: "Общий культурный код и динамичный темп жизни. В диалоге вам легко и интересно."
     },
     icebreakerQuestions: [
-      "Клубный рейв до утра или ламповый акустический квартирник? 🪩",
-      "Какой мем описывает твою текущую неделю лучше всего? 😂",
-      "Самая странная вещь, которую ты покупал на маркетплейсе? 📦"
+      "Музыкальный фестиваль до утра или ламповый акустический концерт?",
+      "Какая тема или книга сейчас занимает твои мысли больше всего?",
+      "Самая необычная покупка за последний месяц?"
     ]
   },
   {
@@ -148,8 +153,9 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 91,
     verified: true,
     online: true,
-    bio: "Психолог и кофейный сноб. Могу разобрать твой тип привязанности за 10 минут, но обещаю этого не делать на первом свидании 😉",
-    zodiac: "Водолей ♒️",
+    telegramUsername: "klvnmrt",
+    bio: "Психолог и исследователь. Могу разобрать теорию привязанности за 10 минут, но обещаю оставить анализ за рамками свидания.",
+    zodiac: "Водолей",
     work: "Практикующий психолог, лектор",
     education: "МГУ им. Ломоносова",
     photos: [
@@ -158,10 +164,10 @@ export const MOCK_PROFILES: Profile[] = [
       "/photos/ekat_3.jpg"
     ],
     tags: [
-      { label: "Психология", emoji: "🧠" },
-      { label: "Книги", emoji: "📚" },
-      { label: "Философия", emoji: "💡" },
-      { label: "Матча & Чай", emoji: "🍵" }
+      { label: "Психология" },
+      { label: "Книги" },
+      { label: "Философия" },
+      { label: "Матча и Чай" }
     ],
     psychology: {
       humor: 88,
@@ -173,9 +179,9 @@ export const MOCK_PROFILES: Profile[] = [
       summary: "Высокая эмоциональная зрелость. Совпадение 96% по фундаментальным жизненным ориентирам."
     },
     icebreakerQuestions: [
-      "Какая книга или фильм перевернули твоё сознание? 📖",
-      "Что важнее в отношениях: абсолютная честность или тактичность? 💭",
-      "Твой любимый способ перезагрузиться после тяжелой недели? 🧘"
+      "Какая книга или фильм сильнее всего повлияли на твои взгляды?",
+      "Что важнее в общении: абсолютная прямота или деликатность?",
+      "Твой любимый способ перезагрузиться после насыщенной недели?"
     ]
   },
   {
@@ -187,8 +193,9 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 95,
     verified: false,
     online: true,
-    bio: "Шеф-кондитер собственной пекарни. Обожаю запах корицы, французский шансон и людей с легким отношением к жизни ✨",
-    zodiac: "Телец ♉️",
+    telegramUsername: "klvnmrt",
+    bio: "Шеф-кондитер пекарни. Обожаю аромат свежей выпечки, французский шансон и открытых людей с легким взглядом на мир.",
+    zodiac: "Телец",
     work: "Основательница кондитерской Maison",
     education: "Le Cordon Bleu Paris",
     photos: [
@@ -197,24 +204,24 @@ export const MOCK_PROFILES: Profile[] = [
       "/photos/polina_3.jpg"
     ],
     tags: [
-      { label: "Гастрономия", emoji: "🥐" },
-      { label: "Франция", emoji: "🥖" },
-      { label: "Уют", emoji: "🕯️" },
-      { label: "Вино", emoji: "🍷" }
+      { label: "Гастрономия" },
+      { label: "Франция" },
+      { label: "Интерьеры" },
+      { label: "Вино" }
     ],
     psychology: {
       humor: 95,
       leisure: 94,
       values: 91,
       temperament: "Гедонист • Экстраверт",
-      loveLanguage: "Забота и кулинарные шедевры",
+      loveLanguage: "Забота и кулинарные открытия",
       mbti: "ESFP",
-      summary: "Гармония в быту и совпадение в стиле отдыха. Любит создавать тепло и праздник вокруг себя."
+      summary: "Гармония в быту и совпадение в стиле отдыха. Любит создавать тепло и комфорт вокруг себя."
     },
     icebreakerQuestions: [
-      "Круассан с миндалем или соленый авокадо-тост на завтрак? 🥐",
-      "Самое вкусное блюдо, которое тебе доводилось пробовать в жизни? 🍝",
-      "Если бы можно было телепортироваться на ужин в любую точку мира — куда? 🌍"
+      "Круассан с миндалем или соленый авокадо-тост на завтрак?",
+      "Самое запоминающееся блюдо, которое тебе доводилось пробовать?",
+      "Если бы можно было телепортироваться на ужин в любой город мира — куда?"
     ]
   },
   {
@@ -226,8 +233,9 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 89,
     verified: true,
     online: false,
-    bio: "Инструктор по серфингу летом и сноуборду зимой. Покоряю волны, горы и новые проекты в маркетинге.",
-    zodiac: "Стрелец ♐️",
+    telegramUsername: "klvnmrt",
+    bio: "Инструктор по серфингу летом и сноуборду зимой. Покоряю волны, горные склоны и новые рубежи в маркетинге.",
+    zodiac: "Стрелец",
     work: "Brand Director в Экстрим-бренде",
     education: "РУДН (Международный маркетинг)",
     photos: [
@@ -236,10 +244,10 @@ export const MOCK_PROFILES: Profile[] = [
       "/photos/daria_3.jpg"
     ],
     tags: [
-      { label: "Сноуборд", emoji: "🏂" },
-      { label: "Серфинг", emoji: "🏄‍♀️" },
-      { label: "Маркетинг", emoji: "📊" },
-      { label: "Горы", emoji: "🏔️" }
+      { label: "Сноуборд" },
+      { label: "Серфинг" },
+      { label: "Маркетинг" },
+      { label: "Горы" }
     ],
     psychology: {
       humor: 91,
@@ -251,9 +259,9 @@ export const MOCK_PROFILES: Profile[] = [
       summary: "Максимальное совпадение по активному отдыху. Заряжает энергией и мотивирует на движение."
     },
     icebreakerQuestions: [
-      "Сноуборд или лыжи? (Только честно, от этого зависит многое!) 🏂",
-      "Палатка на вершине горы или спа-отель у моря? 🏕️",
-      "Самый сумасшедший поступок за последний год? ⚡️"
+      "Сноуборд или горные лыжи?",
+      "Палатка на вершине горы или спа-отель у моря?",
+      "Самый смелый поступок за последний год?"
     ]
   },
   {
@@ -265,34 +273,35 @@ export const MOCK_PROFILES: Profile[] = [
     matchPercent: 94,
     verified: true,
     online: true,
-    bio: "Пишу саундтреки для инди-игр, коллекционирую ретро-синтезаторы. Ищу того, с кем можно залипнуть на звездное небо за городом.",
-    zodiac: "Рыбы ♓️",
-    work: "Sound Designer & Композитор",
-    education: "Gnesin Academy",
+    telegramUsername: "klvnmrt",
+    bio: "Пишу саундтреки для независимых игр, изучаю модульный синтез. Люблю ночные прогулки и наблюдать за звездным небом.",
+    zodiac: "Рыбы",
+    work: "Sound Designer и Композитор",
+    education: "Академия им. Гнесиных",
     photos: [
       "/photos/viktoria_1.jpg",
       "/photos/viktoria_2.jpg",
       "/photos/viktoria_3.jpg"
     ],
     tags: [
-      { label: "Музыка", emoji: "🎹" },
-      { label: "Гейминг", emoji: "🎮" },
-      { label: "Синтезаторы", emoji: "🎛️" },
-      { label: "Небо", emoji: "🌌" }
+      { label: "Музыка" },
+      { label: "Геймдев" },
+      { label: "Синтезаторы" },
+      { label: "Астрономия" }
     ],
     psychology: {
       humor: 93,
       leisure: 91,
       values: 94,
       temperament: "Мечтатель • Художник",
-      loveLanguage: "Музыкальные плейлисты и тишина вдвоем",
+      loveLanguage: "Музыкальные подборки и тишина вдвоем",
       mbti: "INFP",
       summary: "Тонкая душевная организация и гармония. Вы дополняете друг друга в творческом и эмоциональном плане."
     },
     icebreakerQuestions: [
-      "Какой саундтрек из кино или игр вызывает у тебя мурашки? 🎼",
-      "Космос или океан: что тебя завораживает больше? 🪐",
-      "Если бы мы создавали совместную инди-игру, про что бы она была? 👾"
+      "Какой саундтрек из кино или игр вызывает у тебя мурашки?",
+      "Космос или океан: что завораживает сильнее?",
+      "Если бы мы создавали совместную инди-игру, про что бы она была?"
     ]
   }
 ];
@@ -364,60 +373,6 @@ export const MOCK_LIKED_BY_USERS: WhoLikedMeItem[] = [
   }
 ];
 
-export interface ChatMessage {
-  id: string;
-  sender: "me" | "match";
-  text: string;
-  timestamp: string;
-  isIcebreaker?: boolean;
-}
-
-export interface MatchChat {
-  profile: Profile;
-  lastMessage: string;
-  lastMessageTime: string;
-  unreadCount: number;
-  messages: ChatMessage[];
-}
-
-export const INITIAL_MATCH_CHATS: MatchChat[] = [
-  {
-    profile: MOCK_PROFILES[0],
-    lastMessage: "Привет! Вижу, мы оба любим современное искусство 🎨",
-    lastMessageTime: "14:32",
-    unreadCount: 1,
-    messages: [
-      {
-        id: "m1",
-        sender: "match",
-        text: "Привет! Вижу, мы оба любим современное искусство 🎨",
-        timestamp: "14:32"
-      }
-    ]
-  },
-  {
-    profile: MOCK_PROFILES[1],
-    lastMessage: "Круто! Какое твое самое безумное путешествие? ✈️",
-    lastMessageTime: "Вчера",
-    unreadCount: 0,
-    messages: [
-      {
-        id: "m2",
-        sender: "me",
-        text: "Круто! Какое твое самое безумное путешествие? ✈️",
-        timestamp: "Вчера",
-        isIcebreaker: true
-      },
-      {
-        id: "m3",
-        sender: "match",
-        text: "Ооо, автостопом до Байкала! Расскажу при встрече 😉",
-        timestamp: "Вчера"
-      }
-    ]
-  }
-];
-
 export interface CompatibilityQuestionCard {
   id: number;
   category: string;
@@ -432,32 +387,32 @@ export const COMPATIBILITY_CARDS: CompatibilityQuestionCard[] = [
     id: 1,
     category: "Стиль жизни",
     question: "Как выглядит твой идеальный вечер пятницы?",
-    optionA: "Шумная вечеринка с друзьями до рассвета 🎉",
-    optionB: "Уютный ужин дома с фильмом и вином 🍷",
+    optionA: "Шумная компания друзей до рассвета",
+    optionB: "Уютный ужин дома с фильмом и вином",
     insight: "Показывает уровень экстраверсии и потребности в социализации."
   },
   {
     id: 2,
     category: "Отношения",
     question: "Что для тебя важнее в споре с близким человеком?",
-    optionA: "Добраться до истины и справедливости ⚖️",
-    optionB: "Сохранить душевное тепло и комфорт ❤️",
+    optionA: "Добраться до истины и справедливости",
+    optionB: "Сохранить душевное тепло и комфорт",
     insight: "Определяет тип эмоционального реагирования в конфликтах."
   },
   {
     id: 3,
     category: "Путешествия",
     question: "Как ты предпочитаешь путешествовать?",
-    optionA: "Спонтанный роудтрип без четкого плана 🚙",
-    optionB: "Поминутный таймлайн и бронь лучших мест 📋",
+    optionA: "Спонтанный маршрут без четкого плана",
+    optionB: "Продуманный таймлайн и бронь проверенных мест",
     insight: "Маркер гибкости мышления и терпимости к неопределенности."
   },
   {
     id: 4,
     category: "Эмоции",
     question: "Твой главный язык любви и заботы?",
-    optionA: "Прикосновения и совместное время 🫂",
-    optionB: "Поступки, поддержка и подарки 🎁",
-    insight: "Ключевой фактор долгосрочной совместимости пары."
+    optionA: "Прикосновения и совместное время",
+    optionB: "Поступки, поддержка и внимание к деталям",
+    insight: "Ключевой фактор долгосрочной гармонии пары."
   }
 ];

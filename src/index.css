@@ -8,7 +8,7 @@
 
   body {
     font-family: var(--font-sans);
-    background-color: #08060f;
+    background-color: #0c0b11;
     color: #ffffff;
     user-select: none;
     -webkit-user-select: none;
@@ -20,38 +20,26 @@
   }
 }
 
-/* Glassmorphism helpers */
+/* Crisp Clean Glassmorphism (No glowing halos) */
 .glass {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-dark {
-  background: rgba(13, 11, 20, 0.82);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(14, 13, 20, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-pill {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.glow-coral {
-  box-shadow: 0 0 28px -2px rgba(255, 75, 114, 0.5);
-}
-
-.glow-purple {
-  box-shadow: 0 0 28px -2px rgba(139, 92, 246, 0.5);
-}
-
-.glow-star {
-  box-shadow: 0 0 24px -2px rgba(250, 204, 21, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Hide scrollbar */
@@ -61,12 +49,4 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-/* Custom radial background glows */
-.bg-ambient {
-  background-image: 
-    radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.22) 0%, transparent 45%),
-    radial-gradient(circle at 85% 85%, rgba(255, 75, 114, 0.18) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(20, 16, 32, 1) 0%, #08060f 100%);
 }
