@@ -44,12 +44,12 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
   };
 
   return (
-    <div className="absolute inset-0 z-50 flex flex-col justify-between bg-[#0D0B14] text-white p-6 overflow-hidden">
+    <div className="absolute inset-0 z-50 flex flex-col justify-between bg-[#0E0E11] text-white p-6 overflow-hidden">
       {/* Top Header & Progress Indicators */}
       <div className="relative z-10 w-full pt-2">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#FF4B72]" />
+            <span className="w-2 h-2 rounded-full bg-[#FF5252]" />
             <span className="font-bold text-base tracking-wider text-white">
               LOVELY
             </span>
@@ -133,7 +133,7 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
               className="space-y-5 text-left"
             >
               <div>
-                <span className="text-[11px] font-semibold tracking-wider uppercase text-[#FF4B72]">
+                <span className="text-[11px] font-semibold tracking-wider uppercase text-[#FF5252]">
                   Параметры профиля
                 </span>
                 <h2 className="text-lg font-bold text-white mt-1">
@@ -155,19 +155,19 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
                       onClick={() => toggleInterest(item.label)}
                       className={`flex items-center justify-between p-3 rounded-xl border text-xs font-medium transition-colors ${
                         isSelected
-                          ? 'bg-white/15 border-[#FF4B72] text-white'
-                          : 'bg-[#14121E] border-white/5 text-white/70 hover:border-white/15'
+                          ? 'bg-[#202028] border-[#FF5252] text-white'
+                          : 'bg-[#16161D] border-[#22222B] text-white/70 hover:border-[#2F2F3B]'
                       }`}
                     >
                       <span>{item.label}</span>
-                      {isSelected && <Check className="w-3.5 h-3.5 text-[#FF4B72]" />}
+                      {isSelected && <Check className="w-3.5 h-3.5 text-[#FF5252]" />}
                     </button>
                   );
                 })}
               </div>
 
               {/* Interactive question slider */}
-              <div className="p-4 rounded-xl bg-[#14121E] border border-white/10 space-y-3">
+              <div className="p-4 rounded-xl bg-[#16161D] border border-[#22222B] space-y-3">
                 <div className="flex items-center justify-between text-xs">
                   <span className="text-white/60">Шумная компания</span>
                   <span className="text-white/60">Уютный вечер дома</span>
@@ -200,7 +200,7 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
               transition={{ duration: 0.2 }}
               className="flex flex-col items-center text-center space-y-5"
             >
-              <div className="w-20 h-20 flex items-center justify-center rounded-2xl bg-[#14121E] border border-white/10">
+              <div className="w-20 h-20 flex items-center justify-center rounded-2xl bg-[#16161D] border border-[#22222B]">
                 <Compass className="w-10 h-10 text-white/80" />
               </div>
 
@@ -213,7 +213,7 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
                 </p>
               </div>
 
-              <div className="w-full p-4 rounded-xl bg-[#14121E] border border-white/10 text-left space-y-2 text-xs">
+              <div className="w-full p-4 rounded-xl bg-[#16161D] border border-[#22222B] text-left space-y-2 text-xs">
                 <div className="flex items-center justify-between">
                   <span className="text-white/50">Совместимость:</span>
                   <span className="text-emerald-400 font-semibold">от 88% до 96%</span>
@@ -237,7 +237,7 @@ export const Onboarding = ({ onComplete }: OnboardingProps) => {
         <button
           type="button"
           onClick={handleNext}
-          className="w-full py-3 px-6 rounded-xl bg-[#FF4B72] hover:bg-[#ff3b65] text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
+          className="w-full py-3 px-6 rounded-xl bg-[#FF5252] hover:bg-[#ff3b3b] text-white font-medium text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
         >
           <span>{step === 2 ? 'Начать знакомства' : 'Далее'}</span>
           <ArrowRight className="w-4 h-4" />

@@ -37,13 +37,13 @@ export const FilterModal = ({
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: '100%', opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 250 }}
-          className="w-full max-w-[420px] bg-[#120F1D] border-t sm:border border-white/10 rounded-t-3xl sm:rounded-3xl p-6 text-white space-y-5 relative"
+          className="w-full max-w-[420px] bg-[#16161D] border-t sm:border border-[#22222B] rounded-t-3xl sm:rounded-3xl p-6 text-white space-y-5 relative"
         >
           {/* Header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <SlidersHorizontal className="w-5 h-5 text-[#FF4B72]" />
-              <h3 className="font-bold text-base">Фильтры поиска</h3>
+              <SlidersHorizontal className="w-5 h-5 text-white/80" />
+              <h3 className="font-semibold text-base">Фильтры поиска</h3>
             </div>
             <button
               type="button"
@@ -91,7 +91,7 @@ export const FilterModal = ({
               max="40"
               value={filters.maxAge}
               onChange={(e) => setFilters({ ...filters, maxAge: Number(e.target.value) })}
-              className="w-full h-1.5 bg-white/15 rounded-lg appearance-none cursor-pointer accent-[#FF4B72]"
+              className="w-full h-1.5 bg-[#252530] rounded-lg appearance-none cursor-pointer accent-[#FF5252]"
             />
           </div>
 
@@ -107,7 +107,7 @@ export const FilterModal = ({
               max="50"
               value={filters.maxDistance}
               onChange={(e) => setFilters({ ...filters, maxDistance: Number(e.target.value) })}
-              className="w-full h-1.5 bg-white/15 rounded-lg appearance-none cursor-pointer accent-[#FF4B72]"
+              className="w-full h-1.5 bg-[#252530] rounded-lg appearance-none cursor-pointer accent-[#FF5252]"
             />
           </div>
 
@@ -136,7 +136,7 @@ export const FilterModal = ({
                 onApply(filters);
                 onClose();
               }}
-              className="w-full py-3 rounded-xl bg-[#FF4B72] hover:bg-[#ff3b65] text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
+              className="w-full py-3 rounded-xl bg-[#FF5252] hover:bg-[#ff3b3b] text-white font-medium text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
             >
               <Check className="w-4 h-4" />
               Применить настройки

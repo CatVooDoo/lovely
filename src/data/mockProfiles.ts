@@ -51,7 +51,7 @@ export const CURRENT_USER: UserProfile = {
   age: 25,
   city: "Москва",
   avatar: "/photos/alex_user.jpg",
-  bio: "Создаю продукты в IT, люблю ночной город, винил и спонтанные поездки за кофе в полночь.",
+  bio: "Создаю продукты в IT...",
   matchScore: 94,
   temperament: "Амбиверт • Архитектор (INTJ)",
   interests: ["IT и Стартапы", "Кофе", "Путешествия", "Винил", "Кино", "Сноуборд"],

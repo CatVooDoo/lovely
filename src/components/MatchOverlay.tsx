@@ -40,7 +40,7 @@ export const MatchOverlay = ({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0A0812]/95 backdrop-blur-md select-none">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0E0E11]/95 backdrop-blur-md select-none">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +50,7 @@ export const MatchOverlay = ({
         >
           {/* Header Title */}
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-semibold text-white/90 mb-1">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#202028] border border-[#2B2B36] text-xs font-medium text-white/90 mb-1">
               <span>{matchProfile.matchPercent}% Совместимость</span>
             </div>
 
@@ -65,7 +65,7 @@ export const MatchOverlay = ({
           {/* Connected Avatar Circles without glow */}
           <div className="relative flex items-center justify-center py-2">
             {/* User Avatar */}
-            <div className="relative w-24 h-24 rounded-full p-0.5 bg-white/20 z-10 overflow-hidden border border-white/20">
+            <div className="relative w-24 h-24 rounded-full z-10 overflow-hidden border border-[#22222B]">
               <img
                 src={CURRENT_USER.avatar}
                 alt={CURRENT_USER.name}
@@ -77,7 +77,7 @@ export const MatchOverlay = ({
             </div>
 
             {/* Match Avatar */}
-            <div className="relative w-24 h-24 -ml-5 rounded-full p-0.5 bg-[#FF4B72]/60 z-10 overflow-hidden border border-white/20">
+            <div className="relative w-24 h-24 -ml-5 rounded-full z-10 overflow-hidden border border-[#22222B]">
               <img
                 src={matchProfile.photos[0]}
                 alt={matchProfile.name}
@@ -102,7 +102,7 @@ export const MatchOverlay = ({
             </div>
 
             {/* Icebreaker Card with prev/next controls */}
-            <div className="relative flex items-center justify-between p-3.5 rounded-2xl bg-[#14121E] border border-white/10 min-h-[84px]">
+            <div className="relative flex items-center justify-between p-3.5 rounded-2xl bg-[#16161D] border border-[#22222B] min-h-[84px]">
               <button
                 type="button"
                 onClick={handlePrevQuestion}

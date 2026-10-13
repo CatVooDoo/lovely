@@ -56,9 +56,9 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#08070d] flex items-center justify-center p-0 sm:py-6 sm:px-4">
+    <div className="min-h-screen w-full bg-[#08080A] flex items-center justify-center p-0 sm:py-6 sm:px-4">
       {/* Telegram Mobile Container Frame */}
-      <main className="w-full max-w-[420px] h-[100dvh] mx-auto overflow-hidden relative rounded-none sm:rounded-[32px] border-0 sm:border sm:border-white/10 bg-[#0D0B14] flex flex-col justify-between select-none">
+      <main className="w-full max-w-[420px] h-[100dvh] mx-auto overflow-hidden relative rounded-none sm:rounded-[32px] border-0 sm:border sm:border-[#22222A] bg-[#0E0E11] flex flex-col justify-between select-none">
         {/* Telegram Header */}
         <TelegramHeader
           onRestartOnboarding={() => setShowOnboarding(true)}

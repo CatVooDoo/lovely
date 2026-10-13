@@ -43,10 +43,10 @@ export const ProfileDetailsModal = ({
           animate={{ y: 0 }}
           exit={{ y: '100%' }}
           transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-          className="relative w-full max-w-[420px] h-[92vh] bg-[#0E0C16] border-t border-white/10 rounded-t-3xl overflow-y-auto no-scrollbar flex flex-col text-white"
+          className="relative w-full max-w-[420px] h-[92vh] bg-[#0E0E11] border-t border-[#22222B] rounded-t-3xl overflow-y-auto no-scrollbar flex flex-col text-white"
         >
           {/* Top Sticky Close & Match Bar */}
-          <div className="sticky top-0 z-30 flex items-center justify-between p-4 bg-[#0E0C16]/95 border-b border-white/5">
+          <div className="sticky top-0 z-30 flex items-center justify-between p-4 bg-[#0E0E11]/95 border-b border-[#1C1C24]">
             <button
               type="button"
               onClick={onClose}
@@ -71,7 +71,7 @@ export const ProfileDetailsModal = ({
 
           {/* Photo Gallery */}
           <div className="relative px-4 pt-3">
-            <div className="relative w-full h-96 rounded-2xl overflow-hidden border border-white/10 bg-[#14121E]">
+            <div className="relative w-full h-96 rounded-2xl overflow-hidden border border-[#22222B] bg-[#16161D]">
               <img
                 src={profile.photos[activePhotoIdx] || profile.photos[0]}
                 alt={profile.name}
@@ -134,7 +134,7 @@ export const ProfileDetailsModal = ({
             </button>
 
             {/* Work & Education */}
-            <div className="grid grid-cols-1 gap-2 p-3.5 rounded-xl bg-[#14121E] border border-white/10 text-xs">
+            <div className="grid grid-cols-1 gap-2 p-3.5 rounded-xl bg-[#16161D] border border-[#22222B] text-xs">
               <div className="flex items-center gap-2.5 text-white/80">
                 <Briefcase className="w-4 h-4 text-[#FF4B72]" />
                 <span>{profile.work}</span>
@@ -156,7 +156,7 @@ export const ProfileDetailsModal = ({
             </div>
 
             {/* Psychological Compatibility Section */}
-            <div className="p-4 rounded-2xl bg-[#14121E] border border-white/10 space-y-4">
+            <div className="p-4 rounded-2xl bg-[#16161D] border border-[#22222B] space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Brain className="w-5 h-5 text-[#8B5CF6]" />
@@ -278,7 +278,7 @@ export const ProfileDetailsModal = ({
           </div>
 
           {/* Sticky Bottom Actions */}
-          <div className="sticky bottom-0 z-30 flex items-center justify-around p-4 bg-[#0E0C16] border-t border-white/10">
+          <div className="sticky bottom-0 z-30 flex items-center justify-around p-4 bg-[#0E0E11] border-t border-[#22222B]">
             <button
               type="button"
               onClick={() => {
@@ -297,7 +297,7 @@ export const ProfileDetailsModal = ({
                 onLike(profile);
                 onClose();
               }}
-              className="flex-1 py-3 rounded-xl bg-[#FF4B72] hover:bg-[#ff3b65] text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
+              className="flex-1 py-3 rounded-xl bg-[#FF5252] hover:bg-[#ff3b3b] text-white font-medium text-xs transition-colors flex items-center justify-center gap-2 active:scale-98"
             >
               <Heart className="w-4 h-4 fill-white stroke-none" />
               Симпатия

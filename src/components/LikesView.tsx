@@ -31,18 +31,18 @@ export const LikesView = ({
   return (
     <div className="flex-1 flex flex-col p-4 overflow-y-auto no-scrollbar text-white space-y-4">
       {/* Top Banner & Demo Stars Switcher */}
-      <div className="p-4 rounded-2xl bg-[#14121E] border border-white/10 space-y-3">
+      <div className="p-4 rounded-2xl bg-[#16161D] border border-[#22222B] space-y-3">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="font-bold text-sm text-white">
+            <h2 className="font-semibold text-sm text-white">
               {likedList.length} человек проявили интерес
             </h2>
-            <p className="text-xs text-white/50 mt-0.5">
+            <p className="text-xs text-[#8E8E93] mt-0.5">
               Совпадение по психологическому тесту от 88%
             </p>
           </div>
 
-          <div className="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-amber-400 flex items-center gap-1.5 text-xs font-semibold">
+          <div className="px-2.5 py-1 rounded-lg bg-[#202028] border border-[#2B2B36] text-amber-400 flex items-center gap-1.5 text-xs font-semibold">
             <Star className="w-3.5 h-3.5 fill-amber-400" />
             <span>50 Stars</span>
           </div>
@@ -52,10 +52,10 @@ export const LikesView = ({
         <button
           type="button"
           onClick={handleTogglePremium}
-          className={`w-full py-2.5 px-4 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 transition-colors active:scale-98 ${
+          className={`w-full py-2.5 px-4 rounded-xl font-medium text-xs flex items-center justify-center gap-2 transition-colors active:scale-98 ${
             isUnlocked
               ? 'bg-emerald-500/15 border border-emerald-500/30 text-emerald-400'
-              : 'bg-[#FF4B72] hover:bg-[#ff3b65] text-white'
+              : 'bg-[#FF5252] hover:bg-[#ff3b3b] text-white'
           }`}
         >
           {isUnlocked ? (
@@ -79,7 +79,7 @@ export const LikesView = ({
             key={item.id}
             whileTap={{ scale: 0.98 }}
             onClick={() => handleCardClick(item)}
-            className="relative h-60 rounded-2xl overflow-hidden bg-[#14121E] border border-white/10 cursor-pointer group"
+            className="relative h-60 rounded-2xl overflow-hidden bg-[#16161D] border border-[#22222B] cursor-pointer group"
           >
             {/* User Photo with Blur if locked */}
             <img
@@ -144,7 +144,7 @@ export const LikesView = ({
                       const fullProfile = MOCK_PROFILES.find((p) => p.name === item.name) || MOCK_PROFILES[0];
                       onMatch(fullProfile);
                     }}
-                    className="w-7 h-7 rounded-full bg-[#FF4B72] text-white flex items-center justify-center active:scale-90"
+                    className="w-7 h-7 rounded-full bg-[#FF5252] text-white flex items-center justify-center active:scale-90"
                     title="Создать пару"
                   >
                     <Heart className="w-3.5 h-3.5 fill-white stroke-none" />

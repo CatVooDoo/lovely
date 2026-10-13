@@ -34,7 +34,7 @@ export const MatchesAndGamesView = ({
   return (
     <div className="flex-1 flex flex-col p-4 overflow-y-auto no-scrollbar text-white space-y-4">
       {/* Subtab Switcher */}
-      <div className="flex p-1 rounded-xl bg-white/5 border border-white/10">
+      <div className="flex p-1 rounded-xl bg-[#16161D] border border-[#22222B]">
         <button
           type="button"
           onClick={() => setSubTab('matches')}
@@ -74,7 +74,7 @@ export const MatchesAndGamesView = ({
               <motion.div
                 key={match.id}
                 whileTap={{ scale: 0.99 }}
-                className="flex items-center gap-3 p-3 rounded-2xl bg-[#14121E] border border-white/10 hover:border-white/20 transition-colors"
+                className="flex items-center gap-3 p-3 rounded-2xl bg-[#16161D] border border-[#22222B] hover:border-[#2F2F3B] transition-colors"
               >
                 {/* Avatar */}
                 <div 
@@ -130,7 +130,7 @@ export const MatchesAndGamesView = ({
       {/* Content for Compatibility Games Tab */}
       {subTab === 'games' && (
         <div className="space-y-4 pb-6">
-          <div className="p-4 rounded-2xl bg-[#14121E] border border-white/10 space-y-4">
+          <div className="p-4 rounded-2xl bg-[#16161D] border border-[#22222B] space-y-4">
             <div className="flex items-center justify-between">
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/10 text-white/80 border border-white/10">
                 {currentCard.category}
